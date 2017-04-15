@@ -7,11 +7,11 @@ use work.averager_types.all;
 
 entity controller is
 	port (
-
+		clk: in std_logic;
 	);
 	end controller;
 
-architecture behavior of controller is
+architecture rtl of controller is
 	type statetype is
 		();
 	signal currentstate, nextstate:
@@ -32,3 +32,6 @@ begin
 		case currentstate is
 			when S_Off =>
 				x <= '0', --off
+				y <= '1', --on, jika memakai kartu
+	end process;
+end rtl;
