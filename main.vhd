@@ -5,6 +5,8 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use work.averager_types.all;
 
+package busway_tapping_system is
+
 entity BuswayTappingSystem is
 end BuswayTappingSysteml
 

@@ -12,9 +12,34 @@ entity datapath is
 	sel: in std_logic_vector (1 downto 0);
 	load,clear,clk: in std_logic
 	};
-	end datapath;
+end datapath;
 
-	architecture rtl of datapath is
+entity adder2 is
+	port {
+
+	};
+end adder2;
+
+entity adder4 is
+	port {
+		a, b, c, d: in num;
+		
+	};
+end adder4;
+
+entity register is
+	port {
+
+	};
+end register;
+
+entity register4bit is
+	port {
+
+	};
+end register4bit;
+
+architecture rtl of datapath is
 	signal a, nexta : dword;
 	begin
 		-- pilihan mux
@@ -33,10 +58,10 @@ entity datapath is
 		begin
 			if clk ='1' then
 				sum_reg <= next_sum_reg;
-		end if;
-	end process;
+			end if;
+		end process;
 
-	-- register as output
-	sum <= sum_reg;
+		-- register as output
+		sum <= sum_reg;
 
 end rtl;

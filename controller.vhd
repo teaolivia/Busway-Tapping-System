@@ -8,6 +8,8 @@ use work.averager_types.all;
 entity controller is
 	port (
 		clk: in std_logic;
+		money: out std_logic;
+		load, clr: out std_logic;
 	);
 	end controller;
 
